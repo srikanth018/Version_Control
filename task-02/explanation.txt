@@ -1,0 +1,4 @@
+Created a .gitignore file.
+Created environment and temporary files and ignored them in .gitignore.
+These files are not tracked by Git.
+Also created a temp directory to store temporary files, which is ignored.

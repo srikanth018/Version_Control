@@ -1,0 +1,10 @@
+
+# Ingore environment files
+.env
+
+# Ignore Temporary files
+*.tmp
+
+# Ignore Temporary folder
+
+temp/
