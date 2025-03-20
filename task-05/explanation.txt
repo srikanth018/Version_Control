@@ -1,0 +1,29 @@
+Task 5 - Execution step by step
+
+1. Created new File as "bioData.txt"
+2. Made 4 different commits 
+    - DOB added in the Biodata file
+    - College added in the Diodeta file ---> this line contains Typo error
+    - CGPA added to the BioData File
+    - CGPA modified
+3. use this "git log --oneline -n 4" to view the commit history
+4. "git rebase -i HEAD~4" --> to modify the commits in an interactive console 
+5. Input : (edit commit)
+    pick 1ff88d6 DOB added in the Biodata file
+    reword f6ef388 College added in the Diodeta file  ---> modified pick to reword
+    pick e861abc CGPA added to the BioData File
+    pick 057d24d CGPA modified
+6. Corrected the typo in the console
+7. output :
+    Successfully rebased and updated refs/heads/test1.
+8. Input : (squash)
+    pick 1ff88d6 DOB added in the Biodata file
+    pick f6ef388 College added in the Diodeta file  
+    squash e861abc CGPA added to the BioData File   --->  modified pick to squash
+    pick 057d24d CGPA modified
+9. Merged the commits and the commit modified
+10. output:
+    pick 1ff88d6 DOB added in the Biodata file
+    pick f6ef388 College added in the Diodeta file  
+    pick 057d24d CGPA modified
+11. Merged the test1 branch to main
