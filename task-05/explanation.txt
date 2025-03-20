@@ -27,3 +27,8 @@ Task 5 - Execution step by step
     pick f6ef388 College added in the Diodeta file  
     pick 057d24d CGPA modified
 11. Merged the test1 branch to main
+
+
+Squashing Helps in:
+    - Makes clear Commit history
+    - Merges unnecessory commits like Typo corrected commits
