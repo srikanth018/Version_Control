@@ -3,3 +3,5 @@ Programming languages:
 - Python
 - Ruby
 - JavaScript
+- PHP
+- C/C++
