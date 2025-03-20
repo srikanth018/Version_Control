@@ -4,4 +4,4 @@ DOB: 18-01-2004
 
 College : Bannari Amman Institute of Technology
 
-Total CGPA : 8.84
+Total CGPA : 8.82
