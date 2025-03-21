@@ -1,0 +1,26 @@
+Task 6 - Stashing Changes for Context Switching
+
+1. Checked the status of the repository using git status.
+2. Tried switching to branch test1 but was blocked due to uncommitted changes in Languages.txt.
+3. Used git stash to save the changes temporarily and successfully switched to test1.
+4. Added a new file BioData.txt and committed it to test1 branch.
+5. Made another commit modifying the new file.
+6. Switched back to main branch and checked the stash list using git stash list.
+7. Attempted to switch to test1 again but had to stash changes in Languages.txt first.
+8. Used git stash pop to restore the stashed changes in main.
+9. Added and committed the changes to Languages.txt after restoring stash.
+10. Used git stash drop to remove unnecessary stashes.
+11. Merged test1 branch into main successfully.
+12. Pushed all changes to the remote repository using git push origin main.
+
+Commands used :
+
+git stash
+
+git stash pop
+
+git stash list
+
+git stash drop and git stash drop <<stash index>>
+
+git stash apply and git stash apply <<stash index>>
