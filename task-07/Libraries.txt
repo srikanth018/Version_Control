@@ -1,0 +1,4 @@
+Libraries :
+ - Redux
+ - Axios
+ - React
