@@ -1,0 +1,38 @@
+Task 7 - Explanation
+
+1: Switch to the test1 Branch
+
+2: Create new File
+
+3: Commit Changes in test1
+
+ git commit -m "added Frameworks in the txt file"
+
+4: Switch to the test2 Branch
+
+5: Add and Commit Changes in test2
+
+ git commit -m "added libraries in the txt file in the new branch test2"
+
+6: View Logs of Both Branches to get the commit hash
+
+ git log --oneline
+
+7: Cherry-Pick a Commit from test2 to test1
+
+ git checkout test1
+ git cherry-pick 0e791be
+
+8: Modify a File in test2 and Cherry-Pick with -n
+
+ git checkout test2
+ git add .
+ git commit -m "modified Libraries.txt file from test2 branch"
+ git checkout test1
+ git cherry-pick 83f09f3 -n
+
+9: Commit Changes in test1
+
+ git add .
+ git commit -m "Get the commit from the test2 branch to test1 branch using cherry-pick and modify the commit message in the test1 branch using -n in the command"
+
