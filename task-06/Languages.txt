@@ -1,3 +1,5 @@
 Languages Known: 
  - Tamil
  - English
+ - Hindi
+ - Malayalam
