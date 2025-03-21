@@ -1,0 +1,17 @@
+1. Create and Switch to the Feature Branch
+
+git branch feature-branch
+git checkout feature-branch
+
+2. Add and Commit Changes
+
+git add .
+git commit -m "File crated and modified in feature-branch to generate pull request"
+
+
+3. Pushed the `feature-branch` to the remote repository on GitHub
+
+
+4. After pushing the branch, Created a pull request from the feature-branch to main
+
+5. After reviewing the changes,  merged the pull request into the `main` branch.
