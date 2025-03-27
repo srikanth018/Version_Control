@@ -1,0 +1,52 @@
+Task -8 Explanation
+
+1. Creating a Pre-Commit Hook
+I created a `pre-commit` hook script in `.git/hooks/` and ensured it was executable.
+The script was as follows:
+
+TARGET_FILE="File1.txt"
+STAGED_FILE=$(git diff --cached --name-only)
+
+if echo "$STAGED_FILE" | grep -q "$TARGET_FILE"; then
+    echo "The modified file is $TARGET_FILE"
+else
+    echo "The modified file is not $TARGET_FILE"
+    echo "Aborting commit..."
+    exit 1
+fi
+
+echo "The modified file is $STAGED_FILE"
+
+This script checks whether `File1.txt` is modified before allowing a commit.
+
+2. Testing the Pre-Commit Hook
+After writing the script, I attempted to commit changes:
+
+ git add .
+ git commit -m "test aborting commit using hook"
+
+The script successfully identified files that were modified and prevented the commit if `File1.txt` was not among them.
+
+
+3. Final Testing
+I tested the hook again, verifying it blocked commits when necessary and allowed them when conditions were met.
+
+output 1:
+
+PS E:\Presidio Assignments\Version_Control> git commit -m "After writing pre commit hook"
+The modified file is File1.txt
+The modified file is task-08/File1.txt
+[main 4bee26b] After writing pre commit hook
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+output 2:
+
+PS E:\Presidio Assignments\Version_Control> git commit -m "test aborting commit using hook"
+The modified file is File1.txt
+The modified file is task-08/File1.txt
+task-08/explanation.txt
+[main 7447834] test aborting commit using hook
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 task-08/explanation.txt
+
+
