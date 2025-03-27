@@ -1,0 +1,59 @@
+Task 10 - Explanation
+
+1. List Available Branches  
+
+git branch
+
+This displays all branches in the repository.  
+
+2. Switch to the test1 Branch  
+
+git checkout test1
+
+Moves to the test1 branch to work on it.  
+
+3. Stage and Commit Changes  
+
+git add .
+git commit -m "Edited file 1"
+
+- git add . stages all changes.  
+- git commit -m "Edited file 1" commits the changes.  
+
+4. Perform an Interactive Rebase  
+
+git rebase -i HEAD~1
+
+- Allows modifying the last commit message or history.  
+
+5. Force Push After Rewriting History  
+
+git push --force origin test1
+
+- --force is required after a rebase since history was rewritten.  
+
+6. View Reflog (History of HEAD Changes)  
+
+git reflog
+
+- Shows all recent changes, including commits and rebases.  
+- Helps recover lost commits if needed.  
+
+7. Recover a Commit Using Reflog (If Necessary)  
+
+git checkout <commit-hash>
+
+- Replaces <commit-hash> with a commit ID from git reflog.  
+- Allows reverting to a previous state.  
+
+8. Create a New Branch from a Detached Commit  
+
+git switch -c test3
+
+- Creates and switches to a new branch test3 from a recovered commit.  
+
+9. Verify Changes in the Log  
+
+git log
+
+- Displays commit history for validation.  
